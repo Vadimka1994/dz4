@@ -1,0 +1,33 @@
+.phone {
+  width: 237px;
+  height: 498px;
+  background: url('../img/SamsungSS10.svg') no-repeat;
+  background-size: contain;
+  display: flex;
+  padding: 11px 7px 19px;
+  justify-content: center;
+  position: relative;
+
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    background: linear-gradient(270deg, #FDFDFD -9.09%, rgba(255, 255, 255, 0) 5.05%);
+    border-radius: 20px;
+    pointer-events: none;
+  }
+  &:after {
+    background: linear-gradient(90deg, #FDFDFD -9.09%, rgba(255, 255, 255, 0) 5.05%);;
+  }
+  @media screen and (min-width: 760px) {
+    width: 300px;
+    height: 628px;
+    
+  }
+}
